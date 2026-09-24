@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Engine Legal</title>
+<meta name="description" content="Privacy Policy and Terms of Service for The Engine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --ground: #F5F6F8;
+    --paper: #FFFFFF;
+    --ink: #14171D;
+    --muted: #5A6170;
+    --rule: #DADEE5;
+    --accent: #3346C8;
+    --callout: #EEF0FB;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #0E1014; --paper: #15181E; --ink: #E6E8ED; --muted: #9AA1AE;
+      --rule: #2A2F39; --accent: #93A0FF; --callout: #1B1F2C;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #0E1014; --paper: #15181E; --ink: #E6E8ED; --muted: #9AA1AE;
+    --rule: #2A2F39; --accent: #93A0FF; --callout: #1B1F2C;
+  }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font: 400 1.0625rem/1.65 "Source Serif 4", Georgia, "Times New Roman", serif;
+    padding: 0 16px;
+    padding-block: 40px 64px;
+  }
+  .doc {
+    max-width: 44rem;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: clamp(24px, 5vw, 56px);
+  }
+  .mark {
+    font: 500 0.75rem/1 "JetBrains Mono", ui-monospace, Consolas, monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1, h2 {
+    font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    text-wrap: balance;
+    line-height: 1.15;
+  }
+  h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 700; margin: 12px 0 8px; }
+  h2 { font-size: 1.3rem; font-weight: 600; margin: 2.4em 0 0.4em; padding-top: 1.2em; border-top: 1px solid var(--rule); }
+  .meta {
+    font: 500 0.8rem/1.5 "JetBrains Mono", ui-monospace, Consolas, monospace;
+    color: var(--muted);
+    display: flex; flex-wrap: wrap; gap: 4px 20px;
+  }
+  p, li { max-width: 65ch; }
+  ul { padding-left: 1.2em; }
+  li + li { margin-top: 0.35em; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  .callout {
+    background: var(--callout);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 1.2em 0;
+  }
+  .callout p { margin: 0; }
+  .callout p + p { margin-top: 0.6em; }
+  footer { margin-top: 3em; font-size: 0.9rem; color: var(--muted); }
+  .links { list-style: none; padding: 0; margin: 2em 0 0; display: grid; gap: 12px; }
+  .links a { display: block; padding: 16px 20px; border: 1px solid var(--rule); border-radius: 4px; text-decoration: none; color: var(--ink); }
+  .links a:hover { border-color: var(--accent); }
+  .links strong { display: block; font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif; font-size: 1.15rem; color: var(--accent); }
+  .links span { color: var(--muted); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<main class="doc">
+  <div class="mark">The Engine</div>
+  <h1>Legal</h1>
+  <p>The Engine turns a musician's songs and footage into short-form videos and posts them to the TikTok, YouTube and Instagram accounts the musician connects. These documents explain how the service works and how your data is handled.</p>
+  <ul class="links">
+    <li><a href="The%20Engine%20Privacy%20Policy.html"><strong>Privacy Policy</strong><span>What we collect, how we use it, and how to delete it</span></a></li>
+    <li><a href="the-engine-terms-of-service.html"><strong>Terms of Service</strong><span>The rules for using The Engine, including content rights and billing</span></a></li>
+  </ul>
+  <footer>Questions? Contact Max Totten at <a href="mailto:maxtotten01@gmail.com">maxtotten01@gmail.com</a></footer>
+</main>
+</body>
+</html>
