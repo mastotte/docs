@@ -2,99 +2,130 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Engine Legal</title>
-<meta name="description" content="Privacy Policy and Terms of Service for The Engine.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Engine</title>
+<meta name="description" content="The Engine turns a musician's songs and footage into short-form videos and posts them to TikTok, YouTube Shorts and Instagram Reels on a schedule.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap">
 <style>
   :root {
-    --ground: #F5F6F8;
-    --paper: #FFFFFF;
-    --ink: #14171D;
-    --muted: #5A6170;
-    --rule: #DADEE5;
-    --accent: #3346C8;
-    --callout: #EEF0FB;
+    color-scheme: light;
+    --ground: #F5F6F8; --paper: #FFFFFF; --ink: #14171D; --muted: #5A6170;
+    --rule: #DADEE5; --accent: #3346C8; --tint: #EEF0FB;
   }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
+    :root {
       color-scheme: dark;
       --ground: #0E1014; --paper: #15181E; --ink: #E6E8ED; --muted: #9AA1AE;
-      --rule: #2A2F39; --accent: #93A0FF; --callout: #1B1F2C;
+      --rule: #2A2F39; --accent: #93A0FF; --tint: #1B1F2C;
     }
   }
-  :root[data-theme="dark"] {
-    color-scheme: dark;
-    --ground: #0E1014; --paper: #15181E; --ink: #E6E8ED; --muted: #9AA1AE;
-    --rule: #2A2F39; --accent: #93A0FF; --callout: #1B1F2C;
-  }
+  * { box-sizing: border-box; }
   body {
+    margin: 0;
     background: var(--ground);
     color: var(--ink);
     font: 400 1.0625rem/1.65 "Source Serif 4", Georgia, "Times New Roman", serif;
     padding: 0 16px;
-    padding-block: 40px 64px;
+    padding-block: 32px 64px;
   }
-  .doc {
-    max-width: 44rem;
-    margin: 0 auto;
-    background: var(--paper);
-    border: 1px solid var(--rule);
-    border-radius: 6px;
-    padding: clamp(24px, 5vw, 56px);
+  .wrap { max-width: 60rem; margin: 0 auto; display: grid; gap: 56px; }
+  .mono {
+    font: 500 0.75rem/1.4 "JetBrains Mono", ui-monospace, Consolas, monospace;
+    letter-spacing: 0.12em; text-transform: uppercase;
   }
-  .mark {
-    font: 500 0.75rem/1 "JetBrains Mono", ui-monospace, Consolas, monospace;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
+  header { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  header .mono { color: var(--accent); }
+  header a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+  header a:hover { color: var(--accent); }
+  h1, h2, h3 { font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif; text-wrap: balance; line-height: 1.1; margin: 0; }
+  .hero { display: grid; gap: 20px; max-width: 44rem; }
+  .hero h1 { font-size: clamp(2.4rem, 7vw, 4.2rem); font-weight: 800; letter-spacing: -0.02em; }
+  .hero p { font-size: 1.2rem; color: var(--muted); margin: 0; max-width: 36rem; }
+  .platforms { display: flex; flex-wrap: wrap; gap: 8px; }
+  .platforms span {
+    font: 500 0.8rem/1 "JetBrains Mono", ui-monospace, Consolas, monospace;
+    padding: 8px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper);
   }
-  h1, h2 {
-    font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-    text-wrap: balance;
-    line-height: 1.15;
+  .flow {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden;
   }
-  h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 700; margin: 12px 0 8px; }
-  h2 { font-size: 1.3rem; font-weight: 600; margin: 2.4em 0 0.4em; padding-top: 1.2em; border-top: 1px solid var(--rule); }
-  .meta {
-    font: 500 0.8rem/1.5 "JetBrains Mono", ui-monospace, Consolas, monospace;
-    color: var(--muted);
-    display: flex; flex-wrap: wrap; gap: 4px 20px;
+  .step { background: var(--paper); padding: 28px 24px; display: grid; gap: 10px; align-content: start; }
+  .step .mono { color: var(--accent); }
+  .step h3 { font-size: 1.25rem; font-weight: 700; }
+  .step p { margin: 0; color: var(--muted); }
+  .spec h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 20px; }
+  .spec dl { margin: 0; display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr; border-top: 1px solid var(--rule); }
+  .spec dt, .spec dd { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .spec dt { font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif; font-weight: 600; padding-right: 16px; }
+  .spec dd { color: var(--muted); }
+  @media (max-width: 34rem) {
+    .spec dl { grid-template-columns: 1fr; }
+    .spec dt { border-bottom: 0; padding-bottom: 0; }
+    .spec dd { padding-top: 4px; }
   }
-  p, li { max-width: 65ch; }
-  ul { padding-left: 1.2em; }
-  li + li { margin-top: 0.35em; }
-  strong { font-weight: 600; }
+  .contact { background: var(--tint); border-radius: 6px; padding: 28px 24px; display: grid; gap: 8px; }
+  .contact h2 { font-size: 1.4rem; font-weight: 700; }
+  .contact p { margin: 0; }
   a { color: var(--accent); text-underline-offset: 2px; }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-  .callout {
-    background: var(--callout);
-    border-radius: 4px;
-    padding: 16px 20px;
-    margin: 1.2em 0;
-  }
-  .callout p { margin: 0; }
-  .callout p + p { margin-top: 0.6em; }
-  footer { margin-top: 3em; font-size: 0.9rem; color: var(--muted); }
-  .links { list-style: none; padding: 0; margin: 2em 0 0; display: grid; gap: 12px; }
-  .links a { display: block; padding: 16px 20px; border: 1px solid var(--rule); border-radius: 4px; text-decoration: none; color: var(--ink); }
-  .links a:hover { border-color: var(--accent); }
-  .links strong { display: block; font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif; font-size: 1.15rem; color: var(--accent); }
-  .links span { color: var(--muted); font-size: 0.95rem; }
+  footer { display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 20px; }
+  footer a { color: var(--muted); }
 </style>
 </head>
 <body>
-<main class="doc">
-  <div class="mark">The Engine</div>
-  <h1>Legal</h1>
-  <p>The Engine turns a musician's songs and footage into short-form videos and posts them to the TikTok, YouTube and Instagram accounts the musician connects. These documents explain how the service works and how your data is handled.</p>
-  <ul class="links">
-    <li><a href="The%20Engine%20Privacy%20Policy.html"><strong>Privacy Policy</strong><span>What we collect, how we use it, and how to delete it</span></a></li>
-    <li><a href="the-engine-terms-of-service.html"><strong>Terms of Service</strong><span>The rules for using The Engine, including content rights and billing</span></a></li>
-  </ul>
-  <footer>Questions? Contact Max Totten at <a href="mailto:maxtotten01@gmail.com">maxtotten01@gmail.com</a></footer>
-</main>
+<div class="wrap">
+  <header>
+    <span class="mono">The Engine</span>
+    <nav><a href="the-engine-terms-of-service.html">Terms</a> &nbsp;·&nbsp; <a href="The%20Engine%20Privacy%20Policy.html">Privacy</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>Your songs, cut into shorts and posted on schedule.</h1>
+    <p>The Engine turns a musician's tracks and footage into short-form videos, then publishes them to the accounts the artist owns, day after day, without anyone editing by hand.</p>
+    <div class="platforms"><span>TikTok</span><span>YouTube Shorts</span><span>Instagram Reels</span></div>
+  </section>
+
+  <section class="flow" aria-label="How it works">
+    <div class="step">
+      <span class="mono">Bring the source</span>
+      <h3>Songs and footage</h3>
+      <p>Upload audio and clips, or point The Engine at a music video. It splits the footage into scenes and transcribes the lyrics.</p>
+    </div>
+    <div class="step">
+      <span class="mono">Cut the videos</span>
+      <h3>Edited to the beat</h3>
+      <p>Each short is cut to the track's rhythm with on-screen lyric captions, in the artist's chosen visual style.</p>
+    </div>
+    <div class="step">
+      <span class="mono">Post them</span>
+      <h3>On the artist's accounts</h3>
+      <p>Connect TikTok, YouTube and Instagram once. The Engine posts at the cadence you set, and alerts you if a post fails.</p>
+    </div>
+  </section>
+
+  <section class="spec">
+    <h2>Built for artists and their teams</h2>
+    <dl>
+      <dt>Account ownership</dt><dd>Videos go out on the artist's own channels. The Engine never posts from shared or borrowed accounts.</dd>
+      <dt>Per-artist style</dt><dd>Each artist gets their own visual style, caption treatment and posting schedule.</dd>
+      <dt>Access you control</dt><dd>Platform connections use each platform's official sign-in. The tokens they return are stored encrypted, and you can disconnect any account at any time.</dd>
+      <dt>Simple billing</dt><dd>A monthly subscription, billed through Stripe. Cancel whenever you like.</dd>
+    </dl>
+  </section>
+
+  <section class="contact">
+    <h2>Get in touch</h2>
+    <p>The Engine is in early access. To set it up for an artist or roster, email <a href="mailto:maxtotten01@gmail.com">maxtotten01@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Max Totten</span>
+    <a href="the-engine-terms-of-service.html">Terms of Service</a>
+    <a href="The%20Engine%20Privacy%20Policy.html">Privacy Policy</a>
+  </footer>
+</div>
 </body>
 </html>
